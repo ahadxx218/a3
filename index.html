@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحليل المكان</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📸 تحليل المكان</h1>
+  <video id="camera" autoplay playsinline></video>
+  <div style="margin-top: 10px;">
+    <button onclick="analyze(document.getElementById('camera'))">ابدأ التحليل</button>
+    <input type="file" accept="image/*" onchange="handleImageUpload(event)">
+  </div>
+  <p id="result">📍 النتيجة ستظهر هنا...</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="script.js"></script>
+</body>
+</html>
